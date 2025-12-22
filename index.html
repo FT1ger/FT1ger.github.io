@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="static/css/main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="static/3rdparty/bootstrap.min.css">
+    <link rel="stylesheet" href="static/3rdparty/bootstrap-icons.min.css">
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-    <title>TODO FRAME</title>
+
+    <script src="static/3rdparty/bootstrap.min.js"></script>
+    <script src="static/3rdparty/jquery.slim.min.js"></script>
+    <title>面包老虎的烤面包炉</title>
     <meta name="theme-color" content="#FFFFFF">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no">
@@ -18,25 +18,78 @@
 </head>
 
 <body>
-    <header class="flex-center-all">
-        HEADER
+    <header >
+        <div id="header-ft-image">
+            <img src="static/images/ft_head.png" alt="">
+            <div
+                style="background-image: url(static/images/ft_body.png); background-size: auto 100%; width: 100%;">
+            </div>
+            <img src="static/images/ft_tail.png" alt="">
+        </div>
+        <div id="header-ft-text">
+            <img src="static/images/ft_text.png" alt="" height="40px">
+            <b>的烤面包炉</b></div>
     </header>
 
-    <main class="container scroll-container-v">
-        <div class="section-v" id="sec-top" style="background-color: lightpink;">
+    <main class="container-md g-0 g-md-1 scroll-container-v">
+        <!-- <div class="section-v" id="sec-top" style="background-color: lightpink;">
             <div class="flex-center-all" style="height: 100%;">Section TOP</div>
             <div class="scroll-down-hint"><i class="bi bi-chevron-double-down"></i></div>
-        </div>
+        </div> -->
 
-        <div class="section-v" id="sec-fiction" style="background-color: lightyellow;">
-            <div class="flex-center-all" style="height: 100%;">Section FICTION</div>
+        <div class="section-v" id="sec-1">
+        
+            <div id="slideSec1" class="carousel slide h-100">
+                <!-- <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#slideSec1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#slideSec1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#slideSec1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div> -->
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item h-100 active">
+
+                        <div class="row h-100">
+                            <div class="col-md-6 h-100 slide-image">
+                                <img src="media/XWC_cover.jpg" class="d-block w-100 mh-100" alt="cover">
+                            </div>
+                            <div class="col-md-6 slide-text">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="carousel-item">
+                        <!-- <img src="media/XWC_cover.jpg" class="d-block h-100 w-auto h-md-auto w-md-100" alt="c1"> -->
+                    </div>
+                    <div class="carousel-item">
+                        <!-- <img src="media/XWC_cover.jpg" class="d-block h-100 w-auto h-md-auto w-md-100" alt="c2"> -->
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#slideSec1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slideSec1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            
+            <!-- <div class="flex-center-all" style="height: 100%;"></div> -->
             <div class="scroll-down-hint"><i class="bi bi-chevron-double-down"></i></div>
         </div>
         <div class="section-v" id="sec-comic" style="background-color: lightblue;">
-            <div class="flex-center-all" style="height: 100%;">Section COMIC</div>
+            <div class="flex-center-all h-100">Section COMIC</div>
         </div>
-        <footer class="section-v end" id="sec-footer" style="background-color: lightgray;">
-            <div class="flex-center-all" style="height: 100%;">Section FOOTER</div>
+        <footer class="section-v end text-center text-muted">
+            <p>
+                <a href="https://weibo.com/u/3306029127" target="_blank" style="color: inherit!important;">@FT_悖论循环</a> 版权所有 
+            </p>
+            <a href="https://beian.miit.gov.cn/" style="color: inherit!important;">赣ICP备2021000416号</a>
         </footer>
     </main>
 </body>
