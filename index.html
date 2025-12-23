@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="static/3rdparty/bootstrap.min.css">
     <link rel="stylesheet" href="static/3rdparty/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="static/css/main.css">
 
 
     <script src="static/3rdparty/bootstrap.min.js"></script>
     <script src="static/3rdparty/jquery.slim.min.js"></script>
     <title>面包老虎的烤面包炉</title>
-    <meta name="theme-color" content="#FFFFFF">
+    <!-- <meta name="theme-color" content="#FFFFFF"> -->
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no">
     <link rel="icon" href="static/favicon.ico" type="image/x-icon">
@@ -34,27 +34,22 @@
     <main class="container-md g-0 g-md-1 scroll-container-v">
         <!-- <div class="section-v" id="sec-top" style="background-color: lightpink;">
             <div class="flex-center-all" style="height: 100%;">Section TOP</div>
-            <div class="scroll-down-hint"><i class="bi bi-chevron-double-down"></i></div>
+            <div class="scroll-down-hint"><a href="#sec-1"><i class="bi bi-chevron-double-down"></i></a></div>
         </div> -->
 
         <div class="section-v" id="sec-1">
         
-            <div id="slideSec1" class="carousel slide h-100">
-                <!-- <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#slideSec1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#slideSec1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#slideSec1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div> -->
+            <div id="slideSec1" class="carousel slide h-100" data-bsx-ride="carousel">
                 <div class="carousel-inner h-100">
                     <div class="carousel-item h-100 active">
 
-                        <div class="row h-100">
-                            <div class="col-md-6 h-100 slide-image">
+                        <div class="slide-page">
+                            <div class="slide-image">
                                 <img src="media/XWC_cover.jpg" class="d-block w-100 mh-100" alt="cover">
                             </div>
-                            <div class="col-md-6 slide-text">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
+                            <div class="slide-text">
+                                <h5>Sample text</h5>
+                                <p>Sample text sample text sample text sample text sample text sample text sample text sample text.</p>
                             </div>
                         </div>
 
@@ -68,11 +63,11 @@
                         <!-- <img src="media/XWC_cover.jpg" class="d-block h-100 w-auto h-md-auto w-md-100" alt="c2"> -->
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#slideSec1" data-bs-slide="prev">
+                <button class="carousel-control-prev justify-content-start ms-1" type="button" data-bs-target="#slideSec1" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#slideSec1" data-bs-slide="next">
+                <button class="carousel-control-next justify-content-end me-1" type="button" data-bs-target="#slideSec1" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -80,9 +75,11 @@
 
             
             <!-- <div class="flex-center-all" style="height: 100%;"></div> -->
-            <div class="scroll-down-hint"><i class="bi bi-chevron-double-down"></i></div>
+            <a class="scroll-down-hint" href="#sec-2">
+                <i class="bi bi-chevron-double-down"></i>
+            </a>
         </div>
-        <div class="section-v" id="sec-comic" style="background-color: lightblue;">
+        <div class="section-v" id="sec-2" style="background-color: lightblue;">
             <div class="flex-center-all h-100">Section COMIC</div>
         </div>
         <footer class="section-v end text-center text-muted">
