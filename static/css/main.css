@@ -4,6 +4,8 @@
   --color-global-bg: rgb(77, 48, 41);
   --color-text-bg: rgba(77, 48, 41, 0.808);
   --color-text: rgb(231, 211, 196);
+  --color-text-dark: rgb(71, 58, 47);
+  --color-text-muted: rgb(116, 102, 92);
 }
 
 .unselectable {
@@ -15,7 +17,7 @@ body {
     overscroll-behavior-y: contain; /* Disable refresh behaviour */
     background-color: var(--color-global-bg) !important;
     background-image: url(../images/ft_bg.jpg);
-    background-size: 4rem;
+    background-size: 120px;
 }
 
 .scroll-container-v {
@@ -63,19 +65,20 @@ body {
 .scroll-down-hint>i {
     position: absolute;
     color: #FFFFFF80;
+    transform: translateX(-50%);
     animation: bounce 0.8s infinite;
 }
 @keyframes bounce {
-  0%, 100% {
-      opacity: 0.8;
-    transform: translateY(15px);
-    animation-timing-function: ease-out;
-  }
-  50% {
-    opacity: 0.4;
-    transform: translateY(0px);
-    animation-timing-function: ease-in;
-  }
+    0%, 100% {
+        opacity: 0.8;
+        transform: translateY(15px);
+        animation-timing-function: ease-out;
+    }
+    50% {
+        opacity: 0.4;
+        transform: translateY(0px);
+        animation-timing-function: ease-in;
+    }
 }
 
 header {
@@ -87,7 +90,7 @@ header {
     display: flex;
     height: 100%;
 }
-#header-ft-image > * {
+#header-ft-image img {
     display: inline-block;
     height: 100%;
 }
@@ -96,7 +99,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; 
+    width: auto; 
     height: 100%; 
     top: 0; 
     color: rgba(85, 41, 22, 0.726);
@@ -109,10 +112,12 @@ footer {
     font-size: smaller;
 }
 
-.carousel {
+.slide {
     height: 100%;
     background-color: rgba(66, 42, 35, 0.924);
 }
+.slide .carousel-inner {height: 100%;}
+.slide .carousel-item {height: 100%;}
 
 .slide-page {
     height: 100%;
@@ -128,10 +133,100 @@ footer {
     position: absolute;
     width: 100%;
     bottom: 0;
-    padding: 1rem 1rem var(--height-scroll-hint);
+    padding: 1rem 1rem;
     color: var(--color-text);
-    min-height: 200px;
+    min-height: 100px;
     background-color: var(--color-text-bg);
+}
+.slide-text p.text-muted {
+    color: var(--color-text-muted) !important;
+}
+.slide-text p {
+    margin-bottom: 0.5rem;
+    line-height: 1.2rem;
+    font-weight: 300;
+}
+
+#sec-top {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#sec-top .abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+#sec-top #tiger {
+    transform: translate(-50%, -50%);
+    animation: tiger-spin 4s linear infinite;
+}
+@keyframes tiger-spin {
+    from {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+#sec-top #welcome-text1 {
+    height: 14svh;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#sec-top #welcome-text2 {
+    height: 18svh;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#sec-top #welcome-hint1 {
+    font-size: larger;
+    height: 0;
+    color: var(--color-text-muted);
+}
+#sec-top #welcome-hint2 {
+    top: 90%;
+    left: 50%;
+    font-size: larger;
+    text-align: center;
+    color: var(--color-text-muted);
+    transform: translate(-50%, -100%);
+}
+
+.sun-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    animation: rotateAll 30s linear infinite;
+}
+.ray {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    width: 8px;
+    background: #FFCC80;
+    border-radius: 4px;
+    transform-origin: center bottom;
+    transform: rotate(var(--angle)) translateY(-120px); 
+    animation: stretch var(--duration) ease-in-out infinite alternate;
+}
+@keyframes rotateAll {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes stretch {
+    0% { 
+        height: 70px;
+    }
+    100% { 
+        height: var(--target-height);
+    }
 }
 
 /* PC */
@@ -143,6 +238,8 @@ footer {
 
 .slide-page {
     display: flex;
+    padding: 0 50px;
+    align-items: center;
     position: relative;
 }
 .slide-image {
@@ -155,7 +252,26 @@ footer {
     flex: auto;
     position: relative;
     width: auto;
-    min-height: none;
+    height: min-content;
+    min-height: auto;
     padding-bottom: 1rem;
+}
+.slide-text p {
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+}
+.scroll-down-hint>i {
+    font-size: x-large;
+}
+
+#sec-top #welcome-text1 {
+    height: 15svh;
+    top: 30%;
+    left: 30%;
+}
+#sec-top #welcome-text2 {
+    height: 20svh;
+    top: 70%;
+    left: 70%;
 }
 }
