@@ -5,7 +5,7 @@
   --color-text-bg: rgba(77, 48, 41, 0.808);
   --color-text: rgb(231, 211, 196);
   --color-text-dark: rgb(71, 58, 47);
-  --color-text-muted: rgb(116, 102, 92);
+  --color-text-muted: rgb(161, 138, 121);
 }
 
 .unselectable {
@@ -128,7 +128,12 @@ footer {
     height: 100%;
     padding: 0 30px;
     display: flex;
+    justify-content: center;
     align-items: start;
+    max-height: calc(100svh - var(--height-header));
+}
+.slide-image img {
+    max-height: 100%;
 }
 .slide-text {
     position: absolute;
@@ -259,10 +264,6 @@ footer {
     padding: 0;
     min-width: 40%;
     justify-content: end;
-    max-height: calc(100svh - var(--height-header));
-}
-.slide-image img {
-    max-height: 100%;
 }
 .slide-image.video {
     width: auto; 
