@@ -275,6 +275,7 @@ footer {
     height: min-content;
     min-height: auto;
     max-width: 50%;
+    min-width: 40%;
     padding-bottom: 1rem;
 }
 .slide-text p {
