@@ -147,6 +147,14 @@ footer {
     line-height: 1.2rem;
     font-weight: 300;
 }
+.slide-image.video {
+    width: 100%; 
+    height: 70%;
+}
+.slide-image.video iframe {
+    width: 100%;
+    height: 100%;
+}
 
 #sec-top {
     height: 100%;
@@ -249,7 +257,15 @@ footer {
     align-items: center;
     padding: 0;
     min-width: 40%;
-    max-width: 50%;
+    justify-content: end;
+    max-height: calc(100svh - var(--height-header));
+}
+.slide-image img {
+    max-height: 100%;
+}
+.slide-image.video {
+    width: auto; 
+    height: 100%;
 }
 .slide-text {
     flex: auto;
@@ -257,6 +273,7 @@ footer {
     width: auto;
     height: min-content;
     min-height: auto;
+    max-width: 50%;
     padding-bottom: 1rem;
 }
 .slide-text p {
