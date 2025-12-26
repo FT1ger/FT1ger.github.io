@@ -13,7 +13,7 @@
 }
 
 body {
-    height: 100svh;
+    height: 100dvh;
     overscroll-behavior-y: contain; /* Disable refresh behaviour */
     background-color: var(--color-global-bg) !important;
     background-image: url(../images/ft_bg.jpg);
@@ -21,17 +21,17 @@ body {
 }
 
 .scroll-container-v {
-    height: calc(100svh - var(--height-header));
+    height: calc(100dvh - var(--height-header));
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
 .section-v {
-    height: calc(100svh - var(--height-header));
+    height: calc(100dvh - var(--height-header));
     /* If consider compatibility:
         google, safari:
-        height: -webkit-calc(100svh - var(--height-header));
+        height: -webkit-calc(100dvh - var(--height-header));
         firefox:
         height: -moz-calc(100% - 65px);
         opera:
@@ -126,6 +126,7 @@ footer {
 }
 .slide-image {
     height: 100%;
+    padding: 0 30px;
     display: flex;
     align-items: start;
 }
@@ -158,6 +159,7 @@ footer {
     left: 50%;
 }
 #sec-top #tiger {
+    max-width: 100svw;
     transform: translate(-50%, -50%);
     animation: tiger-spin 4s linear infinite;
 }
@@ -170,13 +172,13 @@ footer {
     }
 }
 #sec-top #welcome-text1 {
-    height: 14svh;
+    height: 14dvh;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 #sec-top #welcome-text2 {
-    height: 18svh;
+    height: 18dvh;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -245,6 +247,7 @@ footer {
 .slide-image {
     flex: auto;
     align-items: center;
+    padding: 0;
     min-width: 40%;
     max-width: 50%;
 }
@@ -262,6 +265,9 @@ footer {
 }
 .scroll-down-hint>i {
     font-size: x-large;
+}
+#sec-top #tiger {
+    top: 50%;
 }
 
 #sec-top #welcome-text1 {
